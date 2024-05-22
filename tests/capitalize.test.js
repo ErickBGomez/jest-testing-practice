@@ -1,5 +1,7 @@
 import capitalize from "../scripts/capitalize.js";
 
-it("Erick", () => {
-  expect(capitalize("erick")).toBe("Erick");
+describe("capitalize tests", () => {
+  test("return Erick", () => {
+    expect(capitalize("erick")).toBe("Erick");
+  });
 });
