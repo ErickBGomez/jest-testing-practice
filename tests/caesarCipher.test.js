@@ -13,11 +13,19 @@ describe("Caesar cipher tests", () => {
     expect(caesarCipher("xyz", 3)).toBe("abc");
   });
 
+  test("Don't convert when shift is 0", () => {
+    expect(caesarCipher("abc", 0)).toBe("abc");
+  });
+
   test("Don't convert non-valid characters", () => {
     expect(caesarCipher("100", 10)).toBe("100");
   });
 
   test("Simple words: HeLLo", () => {
     expect(caesarCipher("HeLLo", 3)).toBe("KhOOr");
+  });
+
+  test("Complex words and avoid symbols", () => {
+    expect(caesarCipher("Hello, World!", 3)).toBe("Khoor, Zruog!");
   });
 });
