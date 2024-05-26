@@ -16,4 +16,8 @@ describe("Caesar cipher tests", () => {
   test("Don't convert non-valid characters", () => {
     expect(caesarCipher("100", 10)).toBe("100");
   });
+
+  test("Simple words: HeLLo", () => {
+    expect(caesarCipher("HeLLo", 3)).toBe("KhOOr");
+  });
 });
